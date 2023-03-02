@@ -25,8 +25,8 @@ while True:
         # Receive the data in small chunks and retransmit it
         while True:
             data = connection.recv(16)
-            info = str(binascii.hexlify(data).decode('iso-8859-1')).upper()
-            print('Data: {!r}'.format(info))
+            # info = str(binascii.hexlify(data).decode('iso-8859-1')).upper()
+            print('Data: {!r}'.format(data))
             # if data:
             #     print('sending data back to the client')
             #     connection.sendall(data)
@@ -37,3 +37,4 @@ while True:
     finally:
         # Clean up the connection
         connection.close()
+
